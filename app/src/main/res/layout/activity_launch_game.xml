@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505"
+    tools:context=".LaunchGameActivity">
+
+        <!-- Fundo Imersivo -->
+        <ImageView
+            android:id="@+id/imgGameBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.25"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gta5" />
+
+        <!-- Overlay de Degradê para profundidade -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+            android:backgroundTint="#CC000000" />
+
+        <!-- Área Central -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45">
+
+                <!-- Capa do Jogo com Brilho de Borda -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="30dp"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#20FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/imgGameThumb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gta5" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/txtGameName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Nome do Jogo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="-0.02" />
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Preparando sua sessão..."
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Barra de Progresso com Cor de Acento (Verde Gamer) -->
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/loadingProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="24dp"
+                    android:indeterminate="true"
+                    app:indicatorColor="#2ECC71"
+                    app:trackColor="#1AFFFFFF"
+                    app:trackCornerRadius="10dp" />
+
+                <TextView
+                    android:id="@+id/txtSubStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Conectando aos servidores Artemis..."
+                    android:textColor="#99FFFFFF"
+                    android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Seção de Dica (UX de Jogo) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:alpha="0.7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Dica: Use um controle para a melhor experiência"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Botão Cancelar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="CANCELAR"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:strokeColor="#33FFFFFF"
+            app:cornerRadius="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

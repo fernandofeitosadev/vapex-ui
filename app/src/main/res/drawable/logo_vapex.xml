@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Background Black Circle -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M50,50m-45,0a45,45 0,1 1,90 0a45,45 0,1 1,-90 0" />
+
+    <!-- Stylized 'V' and 'X' combined (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,35 L45,70 L50,70 L65,35 L58,35 L47.5,60 L37,35 Z" />
+
+    <!-- Sharp Apex Accent -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M65,45 L75,45 L75,48 L63,48 Z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,52 L80,52 L80,55 L68,55 Z" />
+
+</vector>

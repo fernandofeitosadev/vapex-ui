@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_gamepad"
+        android:title="Lar" />
+    <item
+        android:id="@+id/wallet"
+        android:enabled="true"
+        android:icon="@drawable/icon_wallet"
+        android:title="Carteira"/>
+
+    <item
+        android:id="@+id/cupoms"
+        android:enabled="true"
+        android:icon="@drawable/icon_coupon"
+        android:title="Cupoms"/>
+
+    <item
+        android:id="@+id/sessoes"
+        android:enabled="true"
+        android:icon="@drawable/icon_calende"
+        android:title="Sessões"/>
+    <item
+        android:id="@+id/perfil"
+        android:enabled="true"
+        android:icon="@drawable/icon_perfil"
+        android:title="Eu" />
+</menu>

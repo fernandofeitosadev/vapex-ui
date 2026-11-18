@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".home.ui.HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="9dp"
+        android:paddingBottom="75dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="0dp">
+
+            <!-- LOGO -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/logovv"
+                android:scaleType="fitCenter" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- SALDO -->
+            <LinearLayout
+                android:id="@+id/containerUserBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_balance_pill"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="3dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- ÍCONE PORQUINHO (SALDO) EM GRADIENTE LARANJA -->
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_piggy_bank"
+                    android:contentDescription="Saldo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvUserBalanceInt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="111"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false" />
+
+                    <TextView
+                        android:id="@+id/tvUserBalanceDec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=".30"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false" />
+
+                </LinearLayout>
+
+                <!-- BOTÃO [+] LARANJA GRADIENTE -->
+                <FrameLayout
+                    android:id="@+id/btnAddBalance"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_orange_btn_plus"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_add_base"
+                        app:tint="#FFFFFF"
+                        android:contentDescription="Adicionar Saldo" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- PERFIL -->
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/calendario"
+
+                    android:contentDescription="Perfil" />
+
+            </FrameLayout>
+
+            <!-- NOTIFICAÇÕES -->
+            <FrameLayout
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_notify"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Notificações" />
+
+                <!-- BADGE -->
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/bg_notification_badge"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="0dp">
+
+
+
+            <!-- INÍCIO -->
+            <LinearLayout
+                android:id="@+id/tvTabInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="17dp"
+                android:background="@drawable/bg_tab_inicio"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/homem"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Início" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="INÍCIO"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+
+
+            <!-- VIP -->
+            <LinearLayout
+                android:id="@+id/btnTabVip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="top|start"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <!-- Ícone VIP à esquerda -->
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_vip_crown"
+                    android:contentDescription="VIP"
+                    app:tint="#FFFFFF" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VIP"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-bold"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="-2dp"
+                    android:src="@drawable/ic_vip_sparkle"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="VIP"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <!-- DIVISOR VIP / SEARCH -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="0dp"
+                android:background="#55FFFFFF"
+                android:layout_gravity="center_vertical"/>
+
+            <!-- SEARCH BAR -->
+            <LinearLayout
+                android:id="@+id/containerSearch"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_header_search_bar"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="3dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pesquisar Aqui..."
+                    android:textColor="#A1A1A6"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:ignore="HardcodedText" />
+
+                <FrameLayout
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/bg_header_search_btn">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_search_header"
+                        app:tint="#000000"
+                        android:contentDescription="Pesquisar"
+                        tools:ignore="ContentDescription" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- BADGES DE CATEGORIAS HORIZONTAIS -->
+        <HorizontalScrollView
+            android:id="@+id/scrollCategoryBadges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingVertical="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="0dp">
+
+                <!-- CHIP: TODOS -->
+                <TextView
+                    android:id="@+id/chip_cat_todos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_tab_inicio"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="TODOS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: AÇÃO -->
+                <TextView
+                    android:id="@+id/chip_cat_acao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="AÇÃO"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: AVENTURA -->
+                <TextView
+                    android:id="@+id/chip_cat_aventura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="AVENTURA"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: RPG -->
+                <TextView
+                    android:id="@+id/chip_cat_rpg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="RPG"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: ESTRATÉGIA -->
+                <TextView
+                    android:id="@+id/chip_cat_estrategia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="ESTRATÉGIA"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: ESPORTES -->
+                <TextView
+                    android:id="@+id/chip_cat_esportes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="ESPORTES"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: CORRIDA -->
+                <TextView
+                    android:id="@+id/chip_cat_corrida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="CORRIDA"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: TERROR -->
+                <TextView
+                    android:id="@+id/chip_cat_terror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="TERROR"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: SIMULAÇÃO -->
+                <TextView
+                    android:id="@+id/chip_cat_simulacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="SIMULAÇÃO"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- CHIP: LUTA -->
+                <TextView
+                    android:id="@+id/chip_cat_luta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_pill_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="LUTA"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_cloud"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Seu jogo a um clique."
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/btn_ver_mais_games"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.05"
+                        android:text="VER MAIS"
+                        android:textColor="#A7FF9800"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FF9800"
+                        android:contentDescription="Ver todos os jogos" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CAROUSEL -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerGames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+                android:paddingTop="0dp"
+            android:paddingBottom="10dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_fire"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Em alta agora"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/btn_ver_mais_trending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.05"
+                        android:text="VER MAIS"
+                        android:textColor="#A7FF9800"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FF9800"
+                        android:contentDescription="Ver todos os jogos em alta" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CAROUSEL -->
+            <HorizontalScrollView
+                android:id="@+id/scrollTrending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- CARD 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="170dp">
+
+                            <FrameLayout
+                                android:id="@+id/card_frame_1"
+                                android:layout_width="130dp"
+                                android:layout_height="170dp"
+                                android:layout_marginStart="36dp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/imgsss"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img3"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+
+                                <!-- BADGE GENERO - CANTO INFERIOR ESQUERDO DA IMAGEM -->
+                                <TextView
+                                    android:id="@+id/badge_card_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/bg_badge_genre"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="3dp"
+                                    android:text="AÇÃO"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <!-- Numeração estilo Netflix no lado esquerdo -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/card_frame_1"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="-12dp"
+                                android:layout_marginStart="-4dp"
+                                android:includeFontPadding="false"
+                                android:text="1"
+                                android:textColor="#FF9800"
+                                android:textSize="96sp"
+                                android:textStyle="bold"
+                                android:shadowColor="#CC000000"
+                                android:shadowDx="4"
+                                android:shadowDy="4"
+                                android:shadowRadius="8"
+                                android:translationZ="5dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:text="Call of Duty: Warzone"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp"
+                                android:text="New Release"
+                                android:textColor="#9E9E9E"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- CARD 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="170dp">
+
+                            <FrameLayout
+                                android:id="@+id/card_frame_2"
+                                android:layout_width="130dp"
+                                android:layout_height="170dp"
+                                android:layout_marginStart="36dp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/img4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img4"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+
+                                <!-- BADGE GENERO - CANTO INFERIOR ESQUERDO DA IMAGEM -->
+                                <TextView
+                                    android:id="@+id/badge_card_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/bg_badge_genre"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="3dp"
+                                    android:text="AVENTURA"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <!-- Numeração estilo Netflix no lado esquerdo -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/card_frame_2"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="-12dp"
+                                android:layout_marginStart="-4dp"
+                                android:includeFontPadding="false"
+                                android:text="2"
+                                android:textColor="#FF9800"
+                                android:textSize="96sp"
+                                android:textStyle="bold"
+                                android:shadowColor="#CC000000"
+                                android:shadowDx="4"
+                                android:shadowDy="4"
+                                android:shadowRadius="8"
+                                android:translationZ="5dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:text="PUBG: Battlegrounds"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp"
+                                android:text="Popular"
+                                android:textColor="#9E9E9E"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- CARD 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="170dp">
+
+                            <FrameLayout
+                                android:id="@+id/card_frame_3"
+                                android:layout_width="130dp"
+                                android:layout_height="170dp"
+                                android:layout_marginStart="36dp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/i6mg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img2"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+
+                                <!-- BADGE GENERO - CANTO INFERIOR ESQUERDO DA IMAGEM -->
+                                <TextView
+                                    android:id="@+id/badge_card_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/bg_badge_genre"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="3dp"
+                                    android:text="TERROR"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <!-- Numeração estilo Netflix no lado esquerdo -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/card_frame_3"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="-12dp"
+                                android:layout_marginStart="-4dp"
+                                android:includeFontPadding="false"
+                                android:text="3"
+                                android:textColor="#FF9800"
+                                android:textSize="96sp"
+                                android:textStyle="bold"
+                                android:shadowColor="#CC000000"
+                                android:shadowDx="4"
+                                android:shadowDy="4"
+                                android:shadowRadius="8"
+                                android:translationZ="5dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:text="God of War Ragnarök"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp"
+                                android:text="Classic"
+                                android:textColor="#9E9E9E"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <View
+                                android:visibility="gone"
+                                android:layout_width="32dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="4dp"
+                                android:background="#8B5CF6" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- CARD 4 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="170dp">
+
+                            <FrameLayout
+                                android:id="@+id/card_frame_4"
+                                android:layout_width="130dp"
+                                android:layout_height="170dp"
+                                android:layout_marginStart="36dp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/imgCard4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/apiderman2"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+
+                                <!-- BADGE GENERO - CANTO INFERIOR ESQUERDO DA IMAGEM -->
+                                <TextView
+                                    android:id="@+id/badge_card_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/bg_badge_genre"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="3dp"
+                                    android:text="ANIMAÇÃO"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="9sp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <!-- Numeração estilo Netflix no lado esquerdo -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/card_frame_4"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="-12dp"
+                                android:layout_marginStart="-4dp"
+                                android:includeFontPadding="false"
+                                android:text="4"
+                                android:textColor="#FF9800"
+                                android:textSize="96sp"
+                                android:textStyle="bold"
+                                android:shadowColor="#CC000000"
+                                android:shadowDx="4"
+                                android:shadowDy="4"
+                                android:shadowRadius="8"
+                                android:translationZ="5dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:text="Spider-Man 2"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp"
+                                android:text="Trending"
+                                android:textColor="#9E9E9E"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <View
+                                android:visibility="gone"
+                                android:layout_width="32dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="4dp"
+                                android:background="#E53935" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <!-- OVERLAY VIP FLUTUANTE INFERIOR -->
+    <FrameLayout
+        android:id="@+id/overlayVipBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="16dp"
+        android:translationZ="16dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- CARD COM FUNDO ROXO ARREDONDADO -->
+        <LinearLayout
+            android:id="@+id/containerVipBannerContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_vip_overlay_banner"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- ÍCONE VIP (COROA) -->
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/coroa"
+                android:contentDescription="Ícone VIP" />
+
+            <!-- TEXTO VIP -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desbloqueie a experiência de jogo VIP ! VIP a"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tvVipPriceSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="partir de apenas R$4.99"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- BOTÃO GO AMARELO -->
+            <TextView
+                android:id="@+id/btnVipBannerGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_vip_btn_yellow"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="7dp"
+                android:text="GO"
+                android:textColor="#360568"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- BOTÃO 'X' PARA FECHAR (ÁREA DE TOQUE EXPANDIDA DA FERRAMENTA) -->
+        <FrameLayout
+            android:id="@+id/btnCloseVipBanner"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="-19dp"
+            android:layout_marginEnd="-10dp"
+            android:clickable="true"
+            android:elevation="24dp"
+            android:translationZ="24dp"
+            android:focusable="true">
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_close_circle" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_close"
+                app:tint="#FFFFFF"
+                android:contentDescription="Fechar VIP" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
