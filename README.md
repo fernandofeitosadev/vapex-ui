@@ -12,7 +12,7 @@ Native Android application for the Vapex Cloud platform, providing cloud service
 
 ## Tech Stack
 
-- Kotlin
+- Java
 - Android SDK
 - Gradle
 
